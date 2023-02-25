@@ -6,18 +6,15 @@ import {
     ListItem,
     ListItemText
  } from '@mui/material'
+ import Todo from './Todo'
 
 function TodoList(props) {
   return (
     <Paper>
         <List>
             {props.todos.map(todo => (
-                <>
-                <ListItem>
-                    <ListItemText>
-                        {todo.task}
-                    </ListItemText>
-                </ListItem>
+                <>                
+                <Todo task={todo.task} key={todo.id} completed={todo.completed}/>
                 <Divider />
                 </>
             ))}

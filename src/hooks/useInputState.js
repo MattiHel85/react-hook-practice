@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 export default initialValue => {
-    const [ value, setValue] = useState(initialValue)
+    const [value, setValue] = useState(initialValue);
     const handleChange = e => {
-        setValue(e.value.target);
+        setValue(e.target.value);
     };
     const reset = () => {
         setValue("");
     };
-    return [value, handleChange, reset]
+    return [value, handleChange, reset];
 };
